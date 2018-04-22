@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright (c) 2018. Magextensions.io - Martin Hooijer. All Rights reserved.
+  ~  Magextensions License (https://www.magextensions.io/license/)
+  ~
+  -->
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="before.body.end">
+            <block class="Magextensionsio\FacebookCustomerChat\Block\Frontend\FacebookCustomerChat" template="Magextensionsio_FacebookCustomerChat::facebook_customer_chat.phtml" name="before_body_js"/>
+        </referenceContainer>
+    </body>
+</page>

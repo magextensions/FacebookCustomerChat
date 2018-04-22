@@ -1,0 +1,77 @@
+<?php
+/**
+ * Copyright (c) 2018. Magextensions.io - Martin Hooijer. All Rights reserved.
+ *  Magextensions License (https://www.magextensions.io/license/)
+ *
+ */
+
+$is_enabled = $block->getFacebookCustomerChatEnabled();
+$enabled = ($is_enabled) ? 'true' : 'false';
+//Get the Facebook Page ID
+$facebook_page_id = $block->getFacebookPageId();
+//Get the Facebook App ID
+$facebook_app_id = $block->getFacebookAppId();
+
+//Get the Locale
+$locale = $block->getLocaleCode() ?: 'en_US';
+
+$theme_color = $block->getThemeColor();
+if(!isset($theme_color) && $theme_color == ''){
+    $theme_color = '';
+}
+
+//Get Logged Out Greeting
+$logged_out_greeting = $block->getLoggedOutGreeting();
+if(!isset($logged_out_greeting) && $logged_out_greeting == ''){
+    $logged_out_greeting = '';
+}
+//Get Logged In Greeting
+$logged_in_greeting = $block->getLoggedInGreeting();
+if(!isset($logged_in_greeting) && $logged_in_greeting == ''){
+    $logged_in_greeting = '';
+}
+
+//Get How to Display the Chatbox
+$greeting_dialog_display = $block->getGreetingDialogDisplay();
+if(!isset($greeting_dialog_display) OR $greeting_dialog_display === ''){
+    $greeting_dialog_display = '';
+}
+
+//Get the Delay
+$greeting_dialog_delay = $block->getGreetingDialogDelay();
+//When delay is not set or is !numeric
+if(!isset($greeting_dialog_delay) OR !is_numeric($greeting_dialog_delay)){
+    $greeting_dialog_delay = '';
+}
+?>
+<?php if($enabled === 'true'){ ?>
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId            : '<?php echo $facebook_app_id; ?>',
+                autoLogAppEvents : true,
+                xfbml            : true,
+                version          : 'v2.11'
+            });
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/<?php echo $locale; ?>/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <div class="fb-customerchat"
+         page_id="<?php echo $facebook_page_id; ?>"
+         ref="webshop"
+         theme_color="<?php echo $theme_color; ?>"
+         logged_in_greeting="<?php echo $logged_in_greeting; ?>"
+         logged_out_greeting="<?php echo $logged_out_greeting; ?>"
+         greeting_dialog_display="<?php echo $greeting_dialog_display; ?>"
+         greeting_dialog_delay="<?php echo $greeting_dialog_delay; ?>"
+    ">
+    </div>
+<?php } ?>

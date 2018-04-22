@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright (c) 2018. Magextensions.io - Martin Hooijer. All Rights reserved.
+  ~  Magextensions License (https://www.magextensions.io/license/)
+  ~
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="magextensionsio_facebook_customer_chat" translate="label" sortOrder="50">
+            <label>Facebook Customer Chat</label>
+        </tab>
+        <section id="magextensionsio_facebook_customer_chat_general" translate="label" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>General Settings</label>
+            <tab>magextensionsio_facebook_customer_chat</tab>
+            <resource>Magextensionsio_FacebookCustomerChat::general_settings</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+                <field id="customer_chat_plugin_enable" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Customer Chat Plugin enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Enable or Disable the customer chat plugin.]]></comment>
+                </field>
+                <field id="facebook_page_id" translate="label" type="text" sortOrder="14" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Facebook Page ID</label>
+                    <comment><![CDATA[Facebook ID of page to get messages]]></comment>
+                </field>
+                <field id="facebook_app_id" translate="label" type="text" sortOrder="14" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Facebook App ID</label>
+                    <comment><![CDATA[Facebook App ID to identify this website to Facebook (create a new app)]]></comment>
+                </field>
+            </group>
+        </section>
+        <section id="magextensionsio_facebook_customer_chat_plugin" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Customer Chat Plugin</label>
+            <tab>magextensionsio_facebook_customer_chat</tab>
+            <resource>Magextensionsio_FacebookCustomerChat::general_settings</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Customer Chat Plugin Configuration</label>
+                <field id="theme_color" translate="label" type="text" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Theme Color</label>
+                    <comment><![CDATA[Optional. The color to use as a theme for the plugin, including the background color of the customer chat plugin icon and the background color of any messages sent by users. Supports any hexadecimal color code with a leading number sign (e.g. #0084FF), except white. We highly recommend you choose a color that has a high contrast to white.]]></comment>
+                </field>
+                <field id="logged_in_greeting" translate="label" type="textarea" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Logged In Greeting Message</label>
+                    <comment><![CDATA[Optional. The greeting text that will be displayed if the user is currently logged in to Facebook. Maximum 80 characters.]]></comment>
+                </field>
+                <field id="logged_out_greeting" translate="label" type="textarea" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Logged Out Greeting Message</label>
+                    <comment><![CDATA[Optional. The greeting text that will be displayed if the user is currently not logged in to Facebook. Maximum 80 characters.]]></comment>
+                </field>
+                <field id="greeting_dialog_display" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Greeting Dialog Display</label>
+                    <source_model>Magextensionsio\FacebookCustomerChat\Model\Config\Source\GreetingDialogDisplay</source_model>
+                    <comment><![CDATA[Sets how the greeting dialog will be displayed. ]]></comment>
+                </field>
+                <field id="greeting_dialog_delay" translate="label" type="text" sortOrder="25" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Greeting Dialog Delay</label>
+                    <comment><![CDATA[Optional. Sets the number of seconds of delay before the greeting dialog is shown after the plugin is loaded. This can be used to customize when you want the greeting dialog to appear.]]></comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
