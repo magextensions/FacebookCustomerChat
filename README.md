@@ -1,6 +1,6 @@
-<h1> Free Magento 2 extension - Facebook Customer Chat</h1>
+<h1>Magento 2 extension - Facebook Customer Chat</h1>
 
-This Magento 2 extension integrates the Facebook Customer Chat Plugin easy into Magento 2.
+This Free Magento 2 extension integrates the Facebook Customer Chat Plugin easy into Magento 2.
 
 <h2>Features</h2>
 - Set theme color.
