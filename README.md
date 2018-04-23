@@ -20,6 +20,24 @@ fade: The greeting dialog of the plugin will be shown, then fade away and stay h
 
 - Set greeting dialog delay.
 
+## Getting Started
+
+Download the extension as a ZIP file from this repository or install our module with [Composer](https://getcomposer.org/) using the following command:
+
+```
+composer require magextensionsio/facebookcustomerchat
+```
+
+If you're installing the extension manually, unzip the archive and upload the files to `/app/code/Magextensionsio/FacebookCustomerChat`. After uploading, run the following [Magento CLI](http://devdocs.magento.com/guides/v2.0/config-guide/cli/config-cli-subcommands.html) commands:
+
+```
+bin/magento module:enable Magextensionsio_FacebookCustomerChat --clear-static-content
+bin/magento setup:upgrade
+bin/magento setup:di:compile
+```
+
+These commands will enable the FacebookCustomerChat extension, perform necessary database updates, and re-compile your Magento store. From there, you'll want to run through the pre-import checklist and set everything up using our [extension guide](https://www.magextensions.io/)).
+
 <h2> Setting Up the Plugin </h2>
 To include the customer chat plugin on your webpage, do the following:
 
@@ -28,7 +46,6 @@ To include the customer chat plugin on your webpage, do the following:
 2. Set your Facebook PageId in the extension settings.
 
 For more info please read the Facebook developer page: https://developers.facebook.com/docs/messenger-platform/discovery/customer-chat-plugin
-
 
 
 <b>PrintScreen Frontend 01</b>
@@ -40,9 +57,6 @@ For more info please read the Facebook developer page: https://developers.facebo
 
 <b>PrintScreen Backend 02</b>
 ![alt text](https://www.magextensions.io/wp-content/uploads/2018/04/Schermafdruk-van-2018-04-23-14-20-24.png)
-
-<h2>TODO</h2>
-Create composer installer and extension install steps.
 
 <h2> Troubleshooting Tips </h2>
 If you're having trouble getting the working please contact us by visit our website: https://www.magextensions.io
