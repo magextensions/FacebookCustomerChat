@@ -4,9 +4,13 @@ This Magento 2 extension integrates the Facebook Customer Chat Plugin easy into 
 
 <h2>Features</h2>
 - Set theme color.
+
 - Set logged in greeting.
+
 - Set logged out greeting.
+
 - Set greeting dialog display:
+
 
 show: The greeting dialog will always be shown when the plugin loads.
 hide: The greeting dialog of the plugin will always be hidden until a user clicks on the plugin.
