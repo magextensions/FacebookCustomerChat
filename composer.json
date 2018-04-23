@@ -7,6 +7,7 @@
   "require": {
     "magento/framework": "^100.1.0|^101.0.0"
   },
+  "minimum-stability":"dev",
   "autoload": {
     "files": [ "registration.php" ],
     "psr-4": {
