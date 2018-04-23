@@ -45,4 +45,4 @@ For more info please read the Facebook developer page: https://developers.facebo
 Create composer installer and extension install steps.
 
 <h2> Troubleshooting Tips </h2>
-If you're having trouble getting the working please contact us by visit out website: https://www.magextensions.io
+If you're having trouble getting the working please contact us by visit our website: https://www.magextensions.io
