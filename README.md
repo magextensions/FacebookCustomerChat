@@ -36,7 +36,7 @@ bin/magento setup:upgrade
 bin/magento setup:di:compile
 ```
 
-These commands will enable the FacebookCustomerChat extension, perform necessary database updates, and re-compile your Magento store. From there, you'll want to run through the pre-import checklist and set everything up using our [extension guide](https://www.magextensions.io/)).
+These commands will enable the Facebook Customer Chat extension, perform necessary database updates, and re-compile your Magento store. From there, you'll want to run through the pre-import checklist and set everything up using our [extension guide](https://www.magextensions.io/)).
 
 <h2> Setting Up the Plugin </h2>
 To include the customer chat plugin on your webpage, do the following:
